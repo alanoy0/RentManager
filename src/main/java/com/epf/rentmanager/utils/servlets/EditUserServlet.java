@@ -45,13 +45,8 @@ public class EditUserServlet extends HttpServlet {
 
 		int id = Integer.parseInt(request.getParameter("id"));
 
-		/*Client clientToEdit = new Client();
-		if(request.getParameter("last_name").equals("")){
 		clientInfoToEdit.setLastName(request.getParameter("last_name"));
-		}
-		else {
-			
-		}*/
+		
 		clientInfoToEdit.setFirstName(request.getParameter("first_name"));
 		clientInfoToEdit.setEmail(request.getParameter("email"));
 		clientInfoToEdit.setBirthDate(LocalDate.parse(request.getParameter("birthdate")));

@@ -29,15 +29,15 @@ public class ClientServiceTest {
    }
    
    @Test
-   void isMoreThan3Letters_should_return_false_when_length_of_name_is_under_3() {
+   void isMoreThan3Letters_should_return_false_when_length_of_firstName_is_under_3() {
 	// Given   
-       Client illegaUser = new Client(20,"Jo", "Doe", "john.doe@ensta.fr",LocalDate.now());
+       Client illegaUser = new Client(20,"Doe","Jo" , "john.doe@ensta.fr",LocalDate.now());
        
       // Then
       assertFalse(Clients.isFirstnameLongEnougth(illegaUser));
    }
    @Test
-   void isMoreThan3Letters_should_return_true_when_length_of_name_is_above_3() {
+   void isMoreThan3Letters_should_return_true_when_length_of_lastName_is_above_3() {
 	// Given
 	   LocalDate birth = LocalDate.of(2000,10, 10);
        Client legalClient = new Client(20,"John", "Doe", "john.doe@ensta.fr",birth);

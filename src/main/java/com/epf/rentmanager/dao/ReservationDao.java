@@ -203,6 +203,7 @@ public class ReservationDao {
 
 	public long edit(int id, Reservation reservation) throws DaoException, SQLException {
 		long ret = 0;
+		if(isLessThan7Days(reservation)) {
 		try (Connection conn = ConnectionManager.getConnection();
 				PreparedStatement pstmt = conn.prepareStatement(EDIT_RESERVATION_QUERY);) {
 
@@ -217,7 +218,7 @@ public class ReservationDao {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
+		}}
 
 		return ret;
 	}

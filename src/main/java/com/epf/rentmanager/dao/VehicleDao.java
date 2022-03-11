@@ -38,7 +38,7 @@ public class VehicleDao {
 			+ "= ?;";
 	public long create(Vehicle vehicle) throws DaoException {
 		long ret = 0;
-		if(enougthSeats(vehicle)) {
+		if(vehicle.enougthSeats()) {
 			try (Connection conn = ConnectionManager.getConnection();
 					PreparedStatement pstmt = conn.prepareStatement(CREATE_VEHICLE_QUERY);) {
 
@@ -55,13 +55,7 @@ public class VehicleDao {
 		return ret;
 	}
 
-	private boolean enougthSeats(Vehicle vehicle) {
-		if (vehicle.getNbPlaces() > 1 && vehicle.getNbPlaces() < 10) {
-			return true;
-		} else {
-			return false;
-		}
-	}
+	
 	public long delete(Vehicle vehicle) throws DaoException {
 		long ret = 0;
 		try (Connection conn = ConnectionManager.getConnection();
@@ -128,6 +122,7 @@ public class VehicleDao {
 	
 	public long edit(int id, Vehicle vehicle) throws DaoException, SQLException {
 		long ret = 0;
+		if(vehicle.enougthSeats()) {
 		try (Connection conn = ConnectionManager.getConnection();
 				PreparedStatement pstmt = conn.prepareStatement(EDIT_VEHICLE_QUERY);) {
 
@@ -144,7 +139,7 @@ public class VehicleDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
+		}
 		return ret;
 	}
 
