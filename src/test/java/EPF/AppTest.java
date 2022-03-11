@@ -28,6 +28,8 @@ import org.junit.jupiter.api.Test;
 
 import com.epf.rentmanager.model.Client;
 
+import TestJava.Clients;
+
 public class AppTest {
    @Test
    void isLegal_should_return_true_when_age_is_over_18() {

@@ -15,6 +15,7 @@ import exception.ServiceException;
 public class ClientService {
 
 	private ClientDao clientDao;
+	private ReservationService reservationDao;
 
 	private ClientService(ClientDao clientDao) {
 		this.clientDao = clientDao;
@@ -23,6 +24,7 @@ public class ClientService {
 	public long delete(Client client) throws ServiceException {
 
 		try {
+			//reservationDao.updateReservationListWhenClientDelete(client);
 			return this.clientDao.delete(client);
 		} catch (DaoException e) {
 			// TODO Auto-generated catch block

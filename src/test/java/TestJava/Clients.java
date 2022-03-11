@@ -1,4 +1,4 @@
-package EPF;
+package TestJava;
 
 import com.epf.rentmanager.model.Client;
 public class Clients {
@@ -9,5 +9,9 @@ public class Clients {
     */
    public static boolean isLegal(Client client) {
        return client.isAdult();
+   }
+   
+   public static boolean isFirstnameLongEnougth(Client client) {
+	   return client.lengthIsMoreThan3(client.getFirstName());
    }
 }

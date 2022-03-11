@@ -18,6 +18,7 @@ import exception.ServiceException;
 public class VehicleService {
 
 	private VehicleDao vehicleDao;
+	private ReservationDao reservationDao;
 	
 	
 	private VehicleService(VehicleDao vehicleDao) {
@@ -37,6 +38,7 @@ public class VehicleService {
 	public long delete(Vehicle vehicle) throws ServiceException {
 
 		try {
+			
 			return this.vehicleDao.delete(vehicle);
 		} catch (DaoException e) {
 			// TODO Auto-generated catch block
