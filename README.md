@@ -20,3 +20,13 @@ Si le client ne respecte pas les conditions celui ci n'est pas créer mais aucun
 >>>4 tests ont été réalié: un qui vérifie que le client est majeur, l'autre qu'il est mineur, un autre qui vérifie que le nom comprend plus 
    de 3 caractères et le dernier vérifie que le prénom contient moins de 3 caractères
 >>>Lorsque les contraintes ne sont pas validées, l'objet ne se crée pas, mais rien n'indique la raison à l'utilisateur
+
+
+>>>Problèmes rencontrés
+J'ai tenté de mettre en place le fait de supprimer les reservations lorsque qu'on supprime un véhicule ou un client mais j'ai eu plein d'erreur dans le terminal: j'ai laissé la fonction dans réservation mais je ne l'utilise pas
+Je n'ai pas su comment accéder à la base de données pour ajouter un modèle aux voitures
+J'ai pris beaucoup de temps à comprendre le lien entre la page, la jsp et la servlet
+J'ai rencontré beaucoup de problème avec les import sans jamais comprendre pourquoi, ce que m'a fait perdre beaucoup de temps
+Au tout début du projet, le terminal de commande m'affichait des erreurs sans raison, alors que quand j'ouvrais un terminal depuis eclipse, je n'avais aucune erreur. De même avec le pom
+
+
