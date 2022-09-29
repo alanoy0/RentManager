@@ -17,7 +17,7 @@ Si le client ne respecte pas les conditions celui ci n'est pas créer mais aucun
 - -Supprimer la reservation en indiquant l'id
 
 >>>Spring est mis en place
->>>4 tests ont été réalié: un qui vérifie que le client est majeur, l'autre qu'il est mineur, un autre qui vérifie que le nom comprend plus 
+>>>4 tests sont réalisés: un qui vérifie que le client est majeur, l'autre qu'il est mineur, un autre qui vérifie que le nom comprend plus 
    de 3 caractères et le dernier vérifie que le prénom contient moins de 3 caractères
 >>>Lorsque les contraintes ne sont pas validées, l'objet ne se crée pas, mais rien n'indique la raison à l'utilisateur
 
